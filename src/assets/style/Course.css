@@ -1,0 +1,20 @@
+/* Course.css */
+
+/* Style for the login popup */
+.login-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 10; /* Ensure the popup is above the content */
+  text-align: center;
+}
+
+.popup-content p {
+  font-size: 18px;
+  margin: 0;
+}
