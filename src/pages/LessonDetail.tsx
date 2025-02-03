@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import Navbar from '../components/Navbar';
 
 // Mock data for lessons
@@ -49,12 +48,7 @@ const LessonDetails: React.FC = () => {
     <div className="min-h-screen bg-gray-100">
       <Navbar />
       <div className="pt-20 px-4 md:px-8 lg:px-12"> {/* Adjusted padding for better spacing */}
-        <motion.div
-          className="w-full mx-auto"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-        >
+        <div className="w-full mx-auto">
           <div className="bg-white rounded-lg shadow-lg overflow-hidden p-4 md:p-8 w-full">
             <h1 className="text-2xl md:text-4xl font-bold text-gray-800 mb-4">{lesson.title}</h1>
             <p className="text-gray-600 mb-6">{lesson.description}</p>
@@ -116,13 +110,10 @@ const LessonDetails: React.FC = () => {
               </Link>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
-
   );
 };
 
 export default LessonDetails;
-
-    
