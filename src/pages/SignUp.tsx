@@ -77,7 +77,7 @@ const SignUp: React.FC = () => {
     <div>
       <Navbar />
       <div className="bg-gray-100 min-h-screen flex justify-center items-center p-24">
-        <div className="bg-white p-8 rounded-lg shadow-lg w-[300px] md:w-full ">
+      <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-sm">
           <h2 className="text-xl md:text-3xl font-bold text-center mb-6">Sign Up</h2>
 
           {errorMessage && (
