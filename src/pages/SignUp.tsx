@@ -76,157 +76,145 @@ const SignUp: React.FC = () => {
   return (
     <div>
       <Navbar />
-      <div className="bg-gray-100 min-h-screen flex justify-center items-center p-24">
-      <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md sm:max-w-lg md:max-w-sm">
-          <h2 className="text-xl md:text-3xl font-bold text-center mb-6">Sign Up</h2>
+      <div className="bg-gray-100 min-h-screen flex justify-center items-center p-4 sm:p-6 md:p-24">
+      <div className="bg-white p-4 sm:p-6 md:p-8 rounded-lg shadow-lg w-full max-w-[95%] sm:max-w-xl md:max-w-2xl">
+        <h2 className="text-2xl md:text-3xl font-bold text-center mb-6">Sign Up</h2>
 
-          {errorMessage && (
-            <p className="text-red-500 text-center mb-4">{errorMessage}</p>
-          )}
-          {successMessage && (
-            <p className="text-green-500 text-center mb-4">{successMessage}</p>
-          )}
+        {errorMessage && (
+          <p className="text-red-500 text-center mb-4">{errorMessage}</p>
+        )}
+        {successMessage && (
+          <p className="text-green-500 text-center mb-4">{successMessage}</p>
+        )}
 
-          <form onSubmit={handleSubmit}>
-            {/* Name Input */}
-            <div className="mb-4">
-              <label
-                htmlFor="name"
-                className="block text-sm font-semibold text-gray-700"
-              >
-                Name
-              </label>
+        <form onSubmit={handleSubmit}>
+          {/* Name Input */}
+          <div className="mb-4">
+            <label htmlFor="name" className="block text-sm font-semibold text-gray-700">
+              Name
+            </label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              className="w-full px-4 py-2 border border-gray-300 rounded-md mt-2"
+              placeholder="Enter your name"
+              required
+            />
+          </div>
+
+          {/* Email Input */}
+          <div className="mb-4">
+            <label htmlFor="email" className="block text-sm font-semibold text-gray-700">
+              Email
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              className="w-full px-4 py-2 border border-gray-300 rounded-md mt-2"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+
+          {/* Password Input with Toggle */}
+          <div className="mb-4">
+            <label htmlFor="password" className="block text-sm font-semibold text-gray-700">
+              Password
+            </label>
+            <div className="relative">
               <input
-                type="text"
-                id="name"
-                name="name"
-                value={formData.name}
+                type={showPassword ? "text" : "password"}
+                id="password"
+                name="password"
+                value={formData.password}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-md mt-2"
-                placeholder="Enter your name"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md mt-2 pr-10"
+                placeholder="Enter your password"
                 required
               />
-            </div>
-
-            {/* Email Input */}
-            <div className="mb-4">
-              <label
-                htmlFor="email"
-                className="block text-sm font-semibold text-gray-700"
+              <button
+                type="button"
+                onClick={togglePasswordVisibility}
+                className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500"
               >
-                Email
-              </label>
+                {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
+              </button>
+            </div>
+          </div>
+
+          {/* Repeat Password Input with Toggle */}
+          <div className="mb-4">
+            <label htmlFor="repeatPassword" className="block text-sm font-semibold text-gray-700">
+              Repeat Password
+            </label>
+            <div className="relative">
               <input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
+                type={showRepeatPassword ? "text" : "password"}
+                id="repeatPassword"
+                name="repeatPassword"
+                value={formData.repeatPassword}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-md mt-2"
-                placeholder="Enter your email"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md mt-2 pr-10"
+                placeholder="Repeat your password"
                 required
               />
-            </div>
-
-            {/* Password Input with Toggle */}
-            <div className="mb-4 relative">
-              <label
-                htmlFor="password"
-                className="block text-sm font-semibold text-gray-700"
+              <button
+                type="button"
+                onClick={toggleRepeatPasswordVisibility}
+                className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500"
               >
-                Password
-              </label>
-              <div className="relative">
-                <input
-                  type={showPassword ? "text" : "password"}
-                  id="password"
-                  name="password"
-                  value={formData.password}
-                  onChange={handleChange}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md mt-2 pr-10"
-                  placeholder="Enter your password"
-                  required
-                />
-                <button
-                  type="button"
-                  onClick={togglePasswordVisibility}
-                  className="absolute right-3 top-3 text-gray-500"
-                >
-                  {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
-                </button>
-              </div>
+                {showRepeatPassword ? <EyeOff size={20} /> : <Eye size={20} />}
+              </button>
             </div>
+          </div>
 
-            {/* Repeat Password Input with Toggle */}
-            <div className="mb-4 relative">
-              <label
-                htmlFor="repeatPassword"
-                className="block text-sm font-semibold text-gray-700"
-              >
-                Repeat Password
-              </label>
-              <div className="relative">
-                <input
-                  type={showRepeatPassword ? "text" : "password"}
-                  id="repeatPassword"
-                  name="repeatPassword"
-                  value={formData.repeatPassword}
-                  onChange={handleChange}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md mt-2 pr-10"
-                  placeholder="Repeat your password"
-                  required
-                />
-                <button
-                  type="button"
-                  onClick={toggleRepeatPasswordVisibility}
-                  className="absolute right-3 top-3 text-gray-500"
-                >
-                  {showRepeatPassword ? <EyeOff size={20} /> : <Eye size={20} />}
-                </button>
-              </div>
+          {/* Password Validation Checkboxes */}
+          <div className="mb-6">
+            <div className="flex items-center space-x-2 mb-2">
+              <input
+                type="checkbox"
+                checked={isValidLength}
+                readOnly
+                className="form-checkbox text-blue-500"
+              />
+              <span className="text-sm">Password is at least 8 characters</span>
             </div>
-
-            {/* Password Validation Checkboxes */}
-            <div className="mb-4">
-              <div className="flex items-center space-x-2">
-                <input
-                  type="checkbox"
-                  checked={isValidLength}
-                  readOnly
-                  className="form-checkbox text-blue-500"
-                />
-                <span>Password is at least 8 characters</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <input
-                  type="checkbox"
-                  checked={hasUppercase}
-                  readOnly
-                  className="form-checkbox text-blue-500"
-                />
-                <span>Contains at least one uppercase letter</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <input
-                  type="checkbox"
-                  checked={hasNumber}
-                  readOnly
-                  className="form-checkbox text-blue-500"
-                />
-                <span>Contains at least one number</span>
-              </div>
+            <div className="flex items-center space-x-2 mb-2">
+              <input
+                type="checkbox"
+                checked={hasUppercase}
+                readOnly
+                className="form-checkbox text-blue-500"
+              />
+              <span className="text-sm">Contains at least one uppercase letter</span>
             </div>
+            <div className="flex items-center space-x-2">
+              <input
+                type="checkbox"
+                checked={hasNumber}
+                readOnly
+                className="form-checkbox text-blue-500"
+              />
+              <span className="text-sm">Contains at least one number</span>
+            </div>
+          </div>
 
-            {/* Submit Button */}
-            <button
-              type="submit"
-              className="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600 transition"
-            >
-              Sign Up
-            </button>
-          </form>
-        </div>
+          {/* Submit Button */}
+          <button
+            type="submit"
+            className="w-full bg-blue-500 text-white py-3 rounded-md hover:bg-blue-600 transition"
+          >
+            Sign Up
+          </button>
+        </form>
       </div>
+    </div>
     </div>
   );
 };
