@@ -57,17 +57,18 @@ const Navbar = () => {
 
           {/* Navigation Items */}
           <div className={`${isMobileMenuOpen ? "absolute top-16 left-0 right-0 bg-white" : "hidden"} md:flex md:items-center md:space-x-8`}>
-            <ul className="font-medium flex flex-col md:flex-row md:items-center md:space-x-8 p-4 md:p-0 bg-gray-50 md:bg-transparent w-full md:w-auto">
-              <li className="py-2 md:py-0">
-                <Link to="/" className="block text-gray-900 hover:text-blue-700 dark:text-white">
-                  Home
-                </Link>
-              </li>
-              <li className="py-2 md:py-0">
-                <Link to="/Course" className="block text-gray-900 hover:text-blue-700 dark:text-white">
-                  Resources
-                </Link>
-              </li>
+          <ul className="font-medium flex flex-col md:flex-row md:items-center md:space-x-8 p-4 md:p-0 bg-gray-50 md:bg-transparent w-full md:w-auto">
+  <li className="py-2 md:py-0">
+    <Link to="/" className="block text-gray-900 hover:text-blue-700 dark:text-gray-100">
+      Home
+    </Link>
+  </li>
+  <li className="py-2 md:py-0">
+    <Link to="/Course" className="block text-gray-900 hover:text-blue-700 dark:text-gray-100">
+      Resources
+    </Link>
+  </li>
+
               {user ? (
                 <li className="relative py-2 md:py-0">
                   <button
