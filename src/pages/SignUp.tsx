@@ -45,7 +45,7 @@ const SignUp: React.FC = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:5000/auth/signup", {
+      const response = await fetch("https://3800-102-33-105-82.ngrok-free.app/auth/signup", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
