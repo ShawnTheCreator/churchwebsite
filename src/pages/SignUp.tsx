@@ -47,7 +47,11 @@ const SignUp: React.FC = () => {
     try {
       const response = await fetch("https://3800-102-33-105-82.ngrok-free.app/auth/signup", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { 
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        credentials: 'include',
         body: JSON.stringify({
           name: formData.name,
           email: formData.email,
