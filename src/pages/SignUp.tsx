@@ -42,10 +42,10 @@ const SignUp: React.FC = () => {
     if (!formData.name || !formData.email || !formData.password) {
       setErrorMessage("All fields are required.");
       return;
-    }
+    } 
 
     try {
-      const response = await fetch("https://c5d0-102-33-108-50.ngrok-free.app/auth/signup", {
+      const response = await fetch("https://d007-102-33-105-82.ngrok-free.app/auth/signup", {
         method: "POST",
         headers: { 
           "Content-Type": "application/json",
