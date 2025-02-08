@@ -42,7 +42,7 @@ const SignUp: React.FC = () => {
     if (!formData.name || !formData.email || !formData.password) {
       setErrorMessage("All fields are required.");
       return;
-    } 
+    }
 
     try {
       const response = await fetch("https://d007-102-33-105-82.ngrok-free.app/auth/signup", {
@@ -51,7 +51,6 @@ const SignUp: React.FC = () => {
           "Content-Type": "application/json",
           "Accept": "application/json"
         },
-        credentials: 'include',
         body: JSON.stringify({
           name: formData.name,
           email: formData.email,
@@ -76,7 +75,6 @@ const SignUp: React.FC = () => {
       setErrorMessage("An error occurred. Please try again.");
     }
   };
-
   return (
     <div>
       <Navbar />
