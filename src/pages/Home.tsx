@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/img-redundant-alt */
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
@@ -38,7 +39,7 @@ function Home() {
       <Navbar />
       
       <div className="container mx-auto mt-8 p-24 fade-in flex flex-col items-center justify-center text-center">
-      <h1 className="text-xl md:text-4xl font-bold text-center mx-0 sm:mx-10 md:mt-16">Welcome to our prophetic<br /> ministry, where faith meets <br />purpose.</h1>
+      <h1 className="text-xl md:text-4xl font-bold text-center mx-0 sm:mx-10 md:mt-16">Welcome to Victorious Crossover<br />where victims are turned into<br />Victor's 1John 5:4-5</h1>
         <p className=" text-sm md:text-lg text-gray-700 text-center mt-4">
           Join our community of believers, sharing insights and inspiration.<br /> Connect with us today!
         </p>
@@ -62,7 +63,7 @@ function Home() {
       <div className="mx-20 slide-in-left">
         <h2 className="text-yellow-600 text-3xl md:text-4xl">Our Purpose</h2>
         <p className="text-3xl md:text-4xl pt-4">
-          We exist to empower individuals<br /> through prophetic guidance and<br /> spiritual growth.
+        We exist to ignite the wells of Revival<br />through reaping a great Harvest of souls<br />for the kingdom of God and through spiritual discipleship
         </p>
       </div>
 
@@ -120,7 +121,7 @@ function Home() {
     <div className="flex-1 bg-white shadow-lg rounded-lg p-6">
       <h2 className="text-xl md:text-2xl font-bold text-yellow-600 md:ml-0 ml-[60px]">About Jesus Ministry</h2>
       <p className="text-gray-600 md:mt-4 md:ml-0 ml-[57px]">
-        Jesus' ministry is centered around the proclamation of the Kingdom of God, teaching about love, forgiveness, and faith. His acts of compassion and miracles demonstrated the nature of God’s Kingdom, and His sacrificial death on the cross offered salvation to all. His resurrection proved His divine identity, and His Great Commission continues to guide the Church today in spreading the gospel of hope and redemption.
+      The purpose of this program is to reveal the person of Jesus Christ. Believers all around the world confess Jesus but only a few know Him. This program is aimed at teaching believers who Jesus is and how to build a relationship with Him. The strength of the Christian life is based on the intimate knowledge and experience of Jesus Christ. 
       </p>
     </div>
   </div>
@@ -132,9 +133,7 @@ function Home() {
     <div className="flex-1 bg-white shadow-lg rounded-lg p-6">
       <h2 className="text-2xl font-bold text-yellow-600">About the Born Again Program</h2>
       <p className="text-gray-600 mt-4">
-        The Born Again Program is more than just a class, it's a life-changing journey of transformation. By the end of the program, you will have a deeper understanding of what it means to be spiritually reborn, equipped with the tools and community support you need to live out your faith every day.
-
-        We invite you to take this step of faith and begin your journey toward a new life in Christ!
+      The Born Again program is a discipleship program for new converts in the faith. This program aims to teach believers about what it means to be born again. The purpose of this program is to ensure that every new convert in the faith grows to the true maturity of becoming a true Disciple of Jesus Christ. Believers will be equipped with the right resources and knowledge on how they should live to please our Lord and Saviour every single day of their life's.
       </p>
     </div>
     <div className="bg-white shadow-lg rounded-lg w-[300px] h-[300px] md:w-[600px] md:h-[500px]">
@@ -171,7 +170,9 @@ function Home() {
           <div className="flex-1 bg-white shadow-lg rounded-lg p-6">
             <h2 className="text-2xl font-bold text-yellow-600">About Evangelism</h2>
             <p className="text-gray-600 mt-4">
-              Christ's life, death, and resurrection to others. It is a central aspect of Christian faith, calling believers to go beyond personal transformation and actively engage in guiding others to experience the same salvation. Evangelism is not limited to preaching from a pulpit; it is demonstrated through acts of kindness, conversations, and living a life that reflects the love and teachings of Christ. 
+            Matthew 9:37 NKJV 
+Then He said to His disciples, “The harvest truly is plentiful, but the laborers are few. 
+The ministry of Evengelism is a responsibility that has been forsaken in the morden day church. This program aims to restore that responsibility by teaching believers how to win souls according to the Apostlic blueprint that the early Church in the book of Acts left for us.
             </p>
           </div>
         </div>
