@@ -45,7 +45,7 @@ const SignUp: React.FC = () => {
     }
 
     try {
-      const response = await fetch("https://def7-102-33-105-82.ngrok-free.app/auth/signup", {
+      const response = await fetch("https://clever-actors-repeat.loca.lt/auth/signup", {
         method: "POST",
         headers: { 
           "Content-Type": "application/json",
