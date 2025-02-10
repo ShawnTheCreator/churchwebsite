@@ -15,7 +15,7 @@ const Login: React.FC = () => {
 
   const handleLogin = async () => {
     try {
-      const response = await fetch("https://ba41-102-33-105-82.ngrok-free.app/auth/login", {
+      const response = await fetch("https://def7-102-33-105-82.ngrok-free.app/auth/login", {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password }),
