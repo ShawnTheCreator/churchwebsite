@@ -15,7 +15,7 @@ const Login: React.FC = () => {
 
   const handleLogin = async () => {
     try {
-      const response = await fetch("https://fancy-bees-scream.loca.lt/auth/login", {
+      const response = await fetch("https://churchwebsite-xout.onrender.com/auth/login", {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password }),

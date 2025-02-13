@@ -45,7 +45,7 @@ const SignUp: React.FC = () => {
     }
 
     try {
-      const response = await fetch("https://fancy-bees-scream.loca.lt/auth/signup", {
+      const response = await fetch("https://churchwebsite-xout.onrender.com/auth/signup", {
         method: "POST",
         headers: { 
           "Content-Type": "application/json",
